@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #000000;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* HERO CARRUSEL - VERSIÓN QUE SÍ FUNCIONA */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-continuous {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    width: 1200%; /* 12 slides × 100% */
+    height: 100%;
+    animation: scrollCarousel 75s linear infinite;
+}
+
+.carousel-slide {
+    flex: 0 0 8.333%; /* 100% ÷ 12 = 8.333% */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@keyframes scrollCarousel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pausar al hacer hover */
+.hero:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 15;
+    width: 90%;
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    
+    margin-bottom: 1.5rem;
+    color: white;
+    white-space: nowrap;
+    background: transparent;
+    backdrop-filter: none;
+    padding: 0;
+    display: block;
+    text-shadow: none;
+}
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    color: black;
+    font-weight: 500;
+    padding: 12px 32px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 0px;
+    transition: all 0.3s ease;
+    letter-spacing: 2px;
+    font-family: monospace;
+}
+
+.cta-button:hover {
+    background: #cccccc;
+    transform: scale(1.02);
+}
+
+
+
+/* ========== ABOUT: imagen izquierda + texto derecha ========== */
+.about-section {
+    background: #0a0a0a;
+    padding: 5rem 0;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 250px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.about-text {
+    flex: 1;
+    text-align: right;
+}
+
+.about-text h2 {
+    font-size: 1.8rem;
+    border-right: 3px solid white;
+    border-left: none;
+    padding-right: 1rem;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    max-width: 100%;
+}
+
+.about-text strong {
+    font-weight: 700;
+    border-bottom: 1px solid #666;
+}
+
+/* ========== VIDEOS: shorts grid ========== */
+.videos-section {
+    background: #000000;
+    padding: 4rem 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+    border-left: 3px solid white;
+    padding-left: 1rem;
+    text-transform: uppercase;
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.video-card {
+    background: #111111;
+    padding: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+.video-wrapper-short {
+    position: relative;
+    padding-bottom: 177.77%; /* 9:16 para shorts */
+    height: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-wrapper-short iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+    font-family: monospace;
+}
+
+.video-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* ========== TRABAJOS: flyers y estilismos ========== */
+.work-section {
+    background: #0a0a0a;
+    padding: 4rem 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+    background: #1a1a1a;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: transform 0.5s ease, filter 0.3s;
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.85);
+    text-align: center;
+    padding: 12px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.03);
+    filter: grayscale(80%);
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-overlay span {
+    color: white;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* ========== REDES SOCIALES ========== */
+.social-section {
+    background: #000000;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.social-links a {
+    color: #aaaaaa;
+    font-size: 2rem;
+    transition: all 0.25s;
+}
+
+.social-links a:hover {
+    color: white;
+    transform: translateY(-4px);
+}
+
+.copyright {
+    font-size: 0.7rem;
+    opacity: 0.5;
+    letter-spacing: 1px;
+}
+
+/* ========== CONTAINER Y RESPONSIVE ========== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-text {
+        text-align: center;
+    }
+    
+    .about-text h2 {
+        border-right: none;
+        border-bottom: 2px solid white;
+        padding-bottom: 0.5rem;
+    }
+    
+    .hero-content h1 {
+        letter-spacing: 3px;
+    }
+    
+    .cta-button {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+    
+    /* Cada video card tendrá su propia altura según el video */
+.video-card {
+    background: #111111;
+    transition: transform 0.2s;
+}
+
+.video-wrapper-short {
+    position: relative;
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+}
+
+/* El video se muestra COMPLETO, sin recortes */
+.video-wrapper-short video {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Opcional: si quieres que el video ocupe todo el ancho pero SIN recortar */
+.video-wrapper-short video {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* ← clave: NO recorta */
+}
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+    
+    .social-links {
+        gap: 1.2rem;
+    }
+    
+    .social-links a {
+        font-size: 1.5rem;
+    }
+}
+/* EFECTOS DE SCROLL */
+.fade-up {
+    opacity: 0;
+    transform: translateY(60px) scale(0.92);
+    filter: blur(4px);
+    transition: all 0.8s cubic-bezier(0.25, 0.95, 0.4, 1.05);
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+/* Spotify embed */
+.spotify-section {
+    background: #050505;
+    padding: 4rem 0;
+}
+
+.spotify-embed {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.spotify-embed iframe {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.spotify-embed iframe:hover {
+    transform: scale(1.01);
+}
