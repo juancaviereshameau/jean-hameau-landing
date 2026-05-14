@@ -432,7 +432,6 @@ h2 {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: transparent;
     transition: all 0.3s ease;
 }
 
@@ -462,7 +461,7 @@ h2 {
 .menu-links li a {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 2 rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     transition: color 0.3s;
@@ -554,10 +553,3 @@ h2 {
 }
 
 /* Ocultar menú en desktop al bajar, mostrar al subir */
-.menu.hide {
-    transform: translateY(-100%);
-}
-
-.menu.show {
-    transform: translateY(0);
-}
