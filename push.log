@@ -1,0 +1,172 @@
+19:42:21.044696 http.c:678              == Info: Couldn't find host github.com in the .netrc file; using defaults
+19:42:21.084124 http.c:678              == Info: Host github.com:443 was resolved.
+19:42:21.084168 http.c:678              == Info: IPv6: (none)
+19:42:21.084179 http.c:678              == Info: IPv4: 4.228.31.150
+19:42:21.084296 http.c:678              == Info:   Trying 4.228.31.150:443...
+19:42:21.194447 http.c:678              == Info: Connected to github.com (4.228.31.150) port 443
+19:42:21.196572 http.c:678              == Info: ALPN: curl offers h2,http/1.1
+19:42:21.197268 http.c:678              == Info: (304) (OUT), TLS handshake, Client hello (1):
+19:42:21.220758 http.c:678              == Info:  CAfile: /etc/ssl/cert.pem
+19:42:21.220775 http.c:678              == Info:  CApath: none
+19:42:21.303100 http.c:678              == Info: (304) (IN), TLS handshake, Server hello (2):
+19:42:21.303797 http.c:678              == Info: (304) (IN), TLS handshake, Unknown (8):
+19:42:21.303872 http.c:678              == Info: (304) (IN), TLS handshake, Certificate (11):
+19:42:21.314449 http.c:678              == Info: (304) (IN), TLS handshake, CERT verify (15):
+19:42:21.315748 http.c:678              == Info: (304) (IN), TLS handshake, Finished (20):
+19:42:21.316301 http.c:678              == Info: (304) (OUT), TLS handshake, Finished (20):
+19:42:21.316352 http.c:678              == Info: SSL connection using TLSv1.3 / AEAD-AES128-GCM-SHA256 / [blank] / UNDEF
+19:42:21.316365 http.c:678              == Info: ALPN: server accepted h2
+19:42:21.316379 http.c:678              == Info: Server certificate:
+19:42:21.316680 http.c:678              == Info:  subject: CN=github.com
+19:42:21.316924 http.c:678              == Info:  start date: May  5 00:00:00 2026 GMT
+19:42:21.316939 http.c:678              == Info:  expire date: Aug  2 23:59:59 2026 GMT
+19:42:21.317079 http.c:678              == Info:  subjectAltName: host "github.com" matched cert's "github.com"
+19:42:21.317117 http.c:678              == Info:  issuer: C=GB; O=Sectigo Limited; CN=Sectigo Public Server Authentication CA DV E36
+19:42:21.317127 http.c:678              == Info:  SSL certificate verify ok.
+19:42:21.317426 http.c:678              == Info: using HTTP/2
+19:42:21.317752 http.c:678              == Info: [HTTP/2] [1] OPENED stream for https://github.com/juancaviereshameau/jean-hameau-landing.git/info/refs?service=git-receive-pack
+19:42:21.317765 http.c:678              == Info: [HTTP/2] [1] [:method: GET]
+19:42:21.317771 http.c:678              == Info: [HTTP/2] [1] [:scheme: https]
+19:42:21.317777 http.c:678              == Info: [HTTP/2] [1] [:authority: github.com]
+19:42:21.317784 http.c:678              == Info: [HTTP/2] [1] [:path: /juancaviereshameau/jean-hameau-landing.git/info/refs?service=git-receive-pack]
+19:42:21.317791 http.c:678              == Info: [HTTP/2] [1] [user-agent: git/2.37.1 (Apple Git-137.1)]
+19:42:21.317797 http.c:678              == Info: [HTTP/2] [1] [accept: */*]
+19:42:21.317805 http.c:678              == Info: [HTTP/2] [1] [accept-encoding: deflate, gzip]
+19:42:21.317811 http.c:678              == Info: [HTTP/2] [1] [pragma: no-cache]
+19:42:21.318337 http.c:625              => Send header, 0000000216 bytes (0x000000d8)
+19:42:21.318361 http.c:637              => Send header: GET /juancaviereshameau/jean-hameau-landing.git/info/refs?service=git-receive-pack HTTP/2
+19:42:21.318367 http.c:637              => Send header: Host: github.com
+19:42:21.318412 http.c:637              => Send header: User-Agent: git/2.37.1 (Apple Git-137.1)
+19:42:21.318418 http.c:637              => Send header: Accept: */*
+19:42:21.318423 http.c:637              => Send header: Accept-Encoding: deflate, gzip
+19:42:21.318429 http.c:637              => Send header: Pragma: no-cache
+19:42:21.318433 http.c:637              => Send header:
+19:42:21.318461 http.c:678              == Info: Request completely sent off
+19:42:21.547883 http.c:625              <= Recv header, 0000000013 bytes (0x0000000d)
+19:42:21.547911 http.c:637              <= Recv header: HTTP/2 401
+19:42:21.547927 http.c:625              <= Recv header, 0000000026 bytes (0x0000001a)
+19:42:21.547934 http.c:637              <= Recv header: server: GitHub-Babel/3.0
+19:42:21.547945 http.c:625              <= Recv header, 0000000054 bytes (0x00000036)
+19:42:21.547952 http.c:637              <= Recv header: content-security-policy: default-src 'none'; sandbox
+19:42:21.547963 http.c:625              <= Recv header, 0000000041 bytes (0x00000029)
+19:42:21.547969 http.c:637              <= Recv header: content-type: text/plain; charset=UTF-8
+19:42:21.547979 http.c:625              <= Recv header, 0000000040 bytes (0x00000028)
+19:42:21.547985 http.c:637              <= Recv header: www-authenticate: Basic realm="GitHub"
+19:42:21.547994 http.c:625              <= Recv header, 0000000020 bytes (0x00000014)
+19:42:21.548000 http.c:637              <= Recv header: content-length: 26
+19:42:21.548008 http.c:625              <= Recv header, 0000000037 bytes (0x00000025)
+19:42:21.548013 http.c:637              <= Recv header: date: Wed, 13 May 2026 23:42:21 GMT
+19:42:21.548021 http.c:625              <= Recv header, 0000000023 bytes (0x00000017)
+19:42:21.548027 http.c:637              <= Recv header: x-frame-options: DENY
+19:42:21.548038 http.c:625              <= Recv header, 0000000073 bytes (0x00000049)
+19:42:21.548045 http.c:637              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+19:42:21.548054 http.c:625              <= Recv header, 0000000057 bytes (0x00000039)
+19:42:21.548060 http.c:637              <= Recv header: x-github-request-id: ECD3:3C1462:5B46B1:6402DB:6A050C5D
+19:42:21.548073 http.c:625              <= Recv header, 0000000002 bytes (0x00000002)
+19:42:21.548082 http.c:637              <= Recv header:
+19:42:21.548253 http.c:678              == Info: Connection #0 to host github.com left intact
+19:42:21.623587 http.c:678              == Info: Found bundle for host: 0x7f977c915ec0 [can multiplex]
+19:42:21.623631 http.c:678              == Info: Re-using existing connection with host github.com
+19:42:21.623652 http.c:678              == Info: Server auth using Basic with user 'juancaviereshameau'
+19:42:21.623688 http.c:678              == Info: [HTTP/2] [3] OPENED stream for https://github.com/juancaviereshameau/jean-hameau-landing.git/info/refs?service=git-receive-pack
+19:42:21.623696 http.c:678              == Info: [HTTP/2] [3] [:method: GET]
+19:42:21.623700 http.c:678              == Info: [HTTP/2] [3] [:scheme: https]
+19:42:21.623703 http.c:678              == Info: [HTTP/2] [3] [:authority: github.com]
+19:42:21.623706 http.c:678              == Info: [HTTP/2] [3] [:path: /juancaviereshameau/jean-hameau-landing.git/info/refs?service=git-receive-pack]
+19:42:21.623709 http.c:678              == Info: [HTTP/2] [3] [authorization: Basic anVhbmNhdmllcmVzaGFtZWF1OmdocF9QVEJMNGFrM1BlTjRqcXI1czF5cElkTkliMWVSUGkxZ09Jc0c=]
+19:42:21.623713 http.c:678              == Info: [HTTP/2] [3] [user-agent: git/2.37.1 (Apple Git-137.1)]
+19:42:21.623716 http.c:678              == Info: [HTTP/2] [3] [accept: */*]
+19:42:21.623719 http.c:678              == Info: [HTTP/2] [3] [accept-encoding: deflate, gzip]
+19:42:21.623770 http.c:678              == Info: [HTTP/2] [3] [pragma: no-cache]
+19:42:21.623983 http.c:625              => Send header, 0000000319 bytes (0x0000013f)
+19:42:21.624024 http.c:637              => Send header: GET /juancaviereshameau/jean-hameau-landing.git/info/refs?service=git-receive-pack HTTP/2
+19:42:21.624036 http.c:637              => Send header: Host: github.com
+19:42:21.624044 http.c:637              => Send header: Authorization: Basic <redacted>
+19:42:21.624049 http.c:637              => Send header: User-Agent: git/2.37.1 (Apple Git-137.1)
+19:42:21.624054 http.c:637              => Send header: Accept: */*
+19:42:21.624073 http.c:637              => Send header: Accept-Encoding: deflate, gzip
+19:42:21.624082 http.c:637              => Send header: Pragma: no-cache
+19:42:21.624089 http.c:637              => Send header:
+19:42:21.624141 http.c:678              == Info: Request completely sent off
+19:42:22.029966 http.c:625              <= Recv header, 0000000013 bytes (0x0000000d)
+19:42:22.029999 http.c:637              <= Recv header: HTTP/2 200
+19:42:22.030023 http.c:625              <= Recv header, 0000000026 bytes (0x0000001a)
+19:42:22.030034 http.c:637              <= Recv header: server: GitHub-Babel/3.0
+19:42:22.030053 http.c:625              <= Recv header, 0000000060 bytes (0x0000003c)
+19:42:22.030063 http.c:637              <= Recv header: content-type: application/x-git-receive-pack-advertisement
+19:42:22.030080 http.c:625              <= Recv header, 0000000054 bytes (0x00000036)
+19:42:22.030089 http.c:637              <= Recv header: content-security-policy: default-src 'none'; sandbox
+19:42:22.030105 http.c:625              <= Recv header, 0000000040 bytes (0x00000028)
+19:42:22.030115 http.c:637              <= Recv header: expires: Fri, 01 Jan 1980 00:00:00 GMT
+19:42:22.030129 http.c:625              <= Recv header, 0000000018 bytes (0x00000012)
+19:42:22.030139 http.c:637              <= Recv header: pragma: no-cache
+19:42:22.030155 http.c:625              <= Recv header, 0000000053 bytes (0x00000035)
+19:42:22.030165 http.c:637              <= Recv header: cache-control: no-cache, max-age=0, must-revalidate
+19:42:22.030181 http.c:625              <= Recv header, 0000000023 bytes (0x00000017)
+19:42:22.030190 http.c:637              <= Recv header: vary: Accept-Encoding
+19:42:22.030203 http.c:625              <= Recv header, 0000000037 bytes (0x00000025)
+19:42:22.030212 http.c:637              <= Recv header: date: Wed, 13 May 2026 23:42:22 GMT
+19:42:22.030226 http.c:625              <= Recv header, 0000000023 bytes (0x00000017)
+19:42:22.030234 http.c:637              <= Recv header: x-frame-options: DENY
+19:42:22.030250 http.c:625              <= Recv header, 0000000073 bytes (0x00000049)
+19:42:22.030259 http.c:637              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+19:42:22.030273 http.c:625              <= Recv header, 0000000057 bytes (0x00000039)
+19:42:22.030283 http.c:637              <= Recv header: x-github-request-id: ECD3:3C1462:5B4713:64034A:6A050C5D
+19:42:22.030299 http.c:625              <= Recv header, 0000000002 bytes (0x00000002)
+19:42:22.030309 http.c:637              <= Recv header:
+19:42:22.030484 http.c:678              == Info: Connection #0 to host github.com left intact
+19:42:27.970271 http.c:678              == Info: Found bundle for host: 0x7f977c915ec0 [can multiplex]
+19:42:27.970297 http.c:678              == Info: Re-using existing connection with host github.com
+19:42:27.970332 http.c:678              == Info: Server auth using Basic with user 'juancaviereshameau'
+19:42:27.970453 http.c:678              == Info: [HTTP/2] [5] OPENED stream for https://github.com/juancaviereshameau/jean-hameau-landing.git/git-receive-pack
+19:42:27.970461 http.c:678              == Info: [HTTP/2] [5] [:method: POST]
+19:42:27.970467 http.c:678              == Info: [HTTP/2] [5] [:scheme: https]
+19:42:27.970472 http.c:678              == Info: [HTTP/2] [5] [:authority: github.com]
+19:42:27.970477 http.c:678              == Info: [HTTP/2] [5] [:path: /juancaviereshameau/jean-hameau-landing.git/git-receive-pack]
+19:42:27.970483 http.c:678              == Info: [HTTP/2] [5] [authorization: Basic anVhbmNhdmllcmVzaGFtZWF1OmdocF9QVEJMNGFrM1BlTjRqcXI1czF5cElkTkliMWVSUGkxZ09Jc0c=]
+19:42:27.970489 http.c:678              == Info: [HTTP/2] [5] [user-agent: git/2.37.1 (Apple Git-137.1)]
+19:42:27.970494 http.c:678              == Info: [HTTP/2] [5] [accept-encoding: deflate, gzip]
+19:42:27.970499 http.c:678              == Info: [HTTP/2] [5] [content-type: application/x-git-receive-pack-request]
+19:42:27.970505 http.c:678              == Info: [HTTP/2] [5] [accept: application/x-git-receive-pack-result]
+19:42:27.970510 http.c:678              == Info: [HTTP/2] [5] [content-length: 40799782]
+19:42:27.971020 http.c:625              => Send header, 0000000398 bytes (0x0000018e)
+19:42:27.971047 http.c:637              => Send header: POST /juancaviereshameau/jean-hameau-landing.git/git-receive-pack HTTP/2
+19:42:27.971051 http.c:637              => Send header: Host: github.com
+19:42:27.971055 http.c:637              => Send header: Authorization: Basic <redacted>
+19:42:27.971058 http.c:637              => Send header: User-Agent: git/2.37.1 (Apple Git-137.1)
+19:42:27.971061 http.c:637              => Send header: Accept-Encoding: deflate, gzip
+19:42:27.971068 http.c:637              => Send header: Content-Type: application/x-git-receive-pack-request
+19:42:27.971071 http.c:637              => Send header: Accept: application/x-git-receive-pack-result
+19:42:27.971074 http.c:637              => Send header: Content-Length: 40799782
+19:42:27.971076 http.c:637              => Send header:
+19:43:07.074450 http.c:678              == Info: upload completely sent off: 40799782 bytes
+19:43:07.773995 http.c:625              <= Recv header, 0000000013 bytes (0x0000000d)
+19:43:07.774031 http.c:637              <= Recv header: HTTP/2 200
+19:43:07.774053 http.c:625              <= Recv header, 0000000026 bytes (0x0000001a)
+19:43:07.774065 http.c:637              <= Recv header: server: GitHub-Babel/3.0
+19:43:07.774103 http.c:625              <= Recv header, 0000000053 bytes (0x00000035)
+19:43:07.774119 http.c:637              <= Recv header: content-type: application/x-git-receive-pack-result
+19:43:07.774239 http.c:625              <= Recv header, 0000000054 bytes (0x00000036)
+19:43:07.774263 http.c:637              <= Recv header: content-security-policy: default-src 'none'; sandbox
+19:43:07.774492 http.c:625              <= Recv header, 0000000040 bytes (0x00000028)
+19:43:07.774510 http.c:637              <= Recv header: expires: Fri, 01 Jan 1980 00:00:00 GMT
+19:43:07.774528 http.c:625              <= Recv header, 0000000018 bytes (0x00000012)
+19:43:07.774538 http.c:637              <= Recv header: pragma: no-cache
+19:43:07.774557 http.c:625              <= Recv header, 0000000053 bytes (0x00000035)
+19:43:07.774568 http.c:637              <= Recv header: cache-control: no-cache, max-age=0, must-revalidate
+19:43:07.774582 http.c:625              <= Recv header, 0000000023 bytes (0x00000017)
+19:43:07.774593 http.c:637              <= Recv header: vary: Accept-Encoding
+19:43:07.774608 http.c:625              <= Recv header, 0000000037 bytes (0x00000025)
+19:43:07.774619 http.c:637              <= Recv header: date: Wed, 13 May 2026 23:43:07 GMT
+19:43:07.774634 http.c:625              <= Recv header, 0000000023 bytes (0x00000017)
+19:43:07.774644 http.c:637              <= Recv header: x-frame-options: DENY
+19:43:07.774661 http.c:625              <= Recv header, 0000000073 bytes (0x00000049)
+19:43:07.774671 http.c:637              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+19:43:07.774707 http.c:625              <= Recv header, 0000000057 bytes (0x00000039)
+19:43:07.774715 http.c:637              <= Recv header: x-github-request-id: ECD3:3C1462:5B4E64:640B6D:6A050C5E
+19:43:07.774725 http.c:625              <= Recv header, 0000000002 bytes (0x00000002)
+19:43:07.774731 http.c:637              <= Recv header:
+19:43:08.609418 http.c:678              == Info: Connection #0 to host github.com left intact
+To https://github.com/juancaviereshameau/jean-hameau-landing.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.

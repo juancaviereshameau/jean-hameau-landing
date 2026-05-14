@@ -34,9 +34,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- MENU MINIMALISTA FLOTANTE -->
+<nav class="menu" id="menu">
+    <div class="menu-container">
+        <div class="menu-logo">
+            <a href="#hero">JH</a>
+        </div>
+        <ul class="menu-links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#spotify">Música</a></li>
+            <li><a href="#social">Conéctate</a></li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
 
     <!-- HERO - CARRUSEL CONTINUO (SCROLL INFINITO) -->
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="carousel-continuous">
     <div class="carousel-track">
         <!-- Originales -->
@@ -63,7 +83,7 @@
     </section>
 
     <!-- ABOUT ME - CON EFECTO FADE -->
-    <section class="about-section fade-up">
+   <section class="about-section fade-up" id="about">
         <div class="container about-container">
             <div class="about-image">
                 <img src="assets/img/aboutme.webp" alt="Jean Hameau">
@@ -77,7 +97,7 @@
     </section>
 
     <!-- VIDEOS - CON YOUTUBE EMBEDS -->
-<section class="videos-section fade-up">
+<section class="videos-section fade-up" id="videos">
     <div class="container">
         <h2>VIDEOS</h2>
         <div class="videos-grid">
@@ -118,7 +138,7 @@
     </div>
 </section>
     <!-- SPOTIFY - REPRODUCTOR -->
-<section class="spotify-section fade-up">
+<section class="spotify-section fade-up" id="spotify">
     <div class="container">
         <h2>ESCUCHA</h2>
         <div class="spotify-embed">
@@ -137,7 +157,7 @@
 </section>
 
     <!-- REDES SOCIALES -->
-    <section class="social-section">
+    <section class="social-section" id="social">
         <div class="container">
             <h2>CONÉCTATE</h2>
             <div class="social-links">
